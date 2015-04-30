@@ -1,4 +1,4 @@
-public class Point implements Drawble{
+public class Point implements Drawble, Visible{
 	private int x;
 	private int y;
 	
@@ -9,7 +9,7 @@ public class Point implements Drawble{
 		this.y = y;
 	}
 	
-	public void show(boolean visible){
+/*	public void show(boolean visible){
 		if(visible == true){
 			show();
 		} else {
@@ -19,7 +19,7 @@ public class Point implements Drawble{
 	
 	public void show(){
 		System.out.println("x좌표 : "+this.getX()+ ", y좌표 : "+this.getY()+"에 점을 그렸습니다.");
-	}
+	}*/
 	
 	
 	
@@ -42,6 +42,16 @@ public class Point implements Drawble{
 		// TODO Auto-generated method stub
 		System.out.println("x좌표 : "+this.getX()+ ", y좌표 : "+this.getY()+"에 점을 그렸습니다.");
 
+	}
+
+	@Override
+	public void visible(boolean visivle) {
+		if(visivle == true){
+			draw();
+		} else {
+			System.out.println("x좌표 : "+this.getX()+ ", y좌표 : "+this.getY()+"에 점을 지웠습니다.");
+		}
+		
 	}
 	
 	
